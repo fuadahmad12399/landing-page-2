@@ -1,5 +1,18 @@
 # landing-page-2
 GrowthOps Assessment
+
+## Setup Instructions
+
+### Frontend
+1. Clone the repo: `git clone [repo-link]`
+2. Install dependencies: `npm install`
+3. Start dev server: `npm run dev`
+
+### Backend
+1. Navigate to `backend/` folder
+2. Install dependencies: `npm install`
+3. Create `.env` file with DB credentials
+4. Start backend: `node server.js`
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
