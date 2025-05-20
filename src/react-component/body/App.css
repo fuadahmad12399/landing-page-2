@@ -1,0 +1,204 @@
+#root {
+  width: 1366px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-section {
+  background: url('../icon/Group\ 2.svg') no-repeat center center / cover;
+  
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+@media screen and (max-width: 630px) {
+  #root {
+    padding: 1rem;
+    max-width: 100%;
+  }
+}
+
+.logo {
+  height: 8vw;
+  padding: 1vw;
+  transition: filter 300ms;
+}
+
+@media screen and (max-width: 630px) {
+  .logo {
+    height: 12vw;
+    padding: 2vw;
+  }
+}
+
+.gradient-text {
+  font-size: clamp(1.5rem, 8vw, 3rem);
+  background: linear-gradient(270deg, red, orange, yellow, green, blue, indigo, violet, red);
+  background-size: 1400% 1400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow 8s linear infinite;
+}
+
+.scroller {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  background: black;
+  padding: 20px 0;
+}
+
+/* Fade-in on the left */
+.scroller::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px; /* Width of the fade-in area */
+  background: linear-gradient(
+    to left,
+    transparent,
+    black 80% /* Match your background color */
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Fade-out on the right */
+.scroller::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100px; /* Width of the fade-out area */
+  background: linear-gradient(
+    to right,
+    transparent,
+    #000000 80% /* Match your background color */
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+
+.scroller__inner {
+  display: flex;
+  gap: 40px; /* Space between logos */
+  animation: scroll-left 7s linear forwards 1;
+}
+
+.scroller__inner_1 {
+  display: flex;
+  gap: 40px; /* Space between logos */
+  animation: scroll-right 7s linear forwards 1;
+}
+
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0 20px;
+  background: linear-gradient(
+    90deg,
+    #007bff 20%,       /* Blue */
+    #00e5d9 30%,       /* Teal */
+    #fddc3b 40% ,
+    orange  10%      /* Yellow */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Glow effect */
+}
+
+.logo-text-super {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0 20px;
+  background: linear-gradient(
+    90deg,
+    #843EDF 40%,       
+    #96BFFD 30%, 
+    white   20%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.3); /* Glow effect */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 50px; /* Rounded container */
+  background: linear-gradient(90deg, #000, #1a1a1a); /* Dark gradient */
+}
+
+
+.logo {
+  height: 50px; /* Adjust as needed */
+  width: auto;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40%); /* Move left by half the width */
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(40%); /* Move left by half the width */
+  }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  padding: clamp(1rem, 2vw, 2rem);
+}
+
+.read-the-docs {
+  color: black;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+.landing-content {
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.landing-content.animate {
+  opacity: 1;
+  transform: translateY(0);
+}

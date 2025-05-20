@@ -1,0 +1,56 @@
+/* react_component/NavBar.css */
+.navbar {
+    background-color: black;
+    /* box-shadow: 0 2px 2px rgba(255, 255, 255, 0.979) */
+  border-radius: 50px; /* Pill shape (fully rounded) */
+  padding: 8px 20px; /* Adjust padding for pill compactness */
+  display: flex;
+  border: 0.03rem solid white;
+  justify-content: space-between;
+
+  align-items: center;
+  max-width: 1280px;
+  margin: 20px auto; /* Centered on the page */
+  height: 60px; /* Fixed height for pill consistency */
+  overflow: hidden; /* Ensure rounded corners clip content */
+
+  box-sizing: border-box;
+  }
+  
+  .logo {
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .nav-bar-icon {
+    font-size: 0.1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #007BFF; /* Bootstrap blue */
+  }
+
+  @media screen and (max-width: 736px) {
+  .root {
+   
+    width: 363px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+};

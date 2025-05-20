@@ -1,0 +1,20 @@
+.pill-button {
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pill-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+  
+  .pill-button:active {
+    transform: translateY(0);
+  }

@@ -1,0 +1,125 @@
+/* Reset some defaults */
+.footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    /* background-image: url('../icon/footer.svg');
+    background-size: cover;
+    background-position: center top; */
+    min-height: 500px;
+    /* font-family: Arial, sans-serif; */
+  }
+
+
+  
+  /* Main Footer Container */
+  .footer-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    top: 400px
+  }
+  
+  /* Top Section */
+  .footer-top {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  gap: 1.5rem;              /* Space between nav and social icons */
+  text-align: center;  
+  }
+  
+  /* Navigation Links */
+  .footer-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav a:hover {
+    color: #1e90ff; /* Hover color */
+  }
+  
+  /* Social Media Icons */
+  .footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    gap: 1.5rem;              /* Space between nav and social icons */
+    text-align: center; 
+    margin-top: 1.5rem; 
+  }
+  
+  .social-icon {
+    font-size: 1.2rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social a:hover .social-icon {
+    color: #1e90ff;
+  }
+  
+  /* Divider Line */
+  .footer-divider {
+    margin: 1.5rem 0;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Bottom Section */
+  .footer-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem; 
+    /* align-items: flex-start; */
+  }
+  
+  /* Copyright Text */
+  .footer-copyright {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  /* Links Section */
+  .footer-links {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-left: auto;
+  }
+  
+  .footer-links a {
+    color: #bbbbbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #ffffff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-top {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-bottom {
+      align-items: center;
+    }
+  }
